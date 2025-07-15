@@ -39,11 +39,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <PromoHero />
-      
+
       <div className="px-4 pb-6" id="menu-section">
         {/* Categories */}
         <div className="mb-4">
-          <div className="flex space-x-2 overflow-x-auto pb-1">
+          <div className="flex space-x-2 overflow-x-auto pb-2">
             {categories.map((category) => (
               <button
                 key={category.slug}
@@ -72,7 +72,7 @@ export default function Home() {
                 {filteredItems.length} items
               </span>
             </div>
-            
+
             <div className="grid grid-cols-1 gap-3">
               {filteredItems.length > 0 ? (
                 filteredItems.map((item) => (
@@ -99,7 +99,7 @@ export default function Home() {
                 View all
               </button>
             </div>
-            
+
             <div className="grid grid-cols-2 gap-3">
               {popularItems.slice(0, 4).map((item) => (
                 <FoodCard key={item.id} item={item} variant="small" />
