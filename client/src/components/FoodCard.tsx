@@ -1,7 +1,8 @@
 import React from 'react';
-import { Star, Clock, Plus, Heart } from 'lucide-react';
+import { Clock, Plus, Heart } from 'lucide-react';
 import { MenuItem } from '@shared/schema';
 import { useCart, useAppContext } from '@/contexts/AppContext';
+import { categories } from '@/data/mockData';
 
 interface FoodCardProps {
   item: MenuItem;
@@ -45,16 +46,13 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
             </button>
           </div>
           
-          <div className="flex items-center space-x-1 mb-1">
-            <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
-            <span className="font-semibold text-xs">{item.rating}</span>
-          </div>
-          
           <h5 className="font-bold text-xs mb-1 line-clamp-1">{item.name}</h5>
-          <p className="text-gray-500 text-xs mb-2 line-clamp-1">{item.restaurant}</p>
+          <p className="text-gray-500 text-xs mb-2 line-clamp-1">
+            {categories.find(cat => cat.id === item.categoryId)?.name || 'Other'}
+          </p>
           
           <div className="flex items-center justify-between">
-            <span className="text-xs font-bold">${item.price}</span>
+            <span className="text-xs font-bold">₦{item.price}</span>
             <button
               onClick={handleAddToCart}
               className="bg-primary-red text-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
@@ -90,15 +88,10 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
         </div>
         
         <div className="flex-2 ml-4">
-          <div className="flex items-center space-x-2 mb-1">
-            <div className="flex items-center space-x-1">
-              <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
-              <span className="font-semibold text-xs">{item.rating}</span>
-            </div>
-          </div>
-          
           <h4 className="font-bold text-sm mb-1">{item.name}</h4>
-          <p className="text-gray-500 text-xs mb-1">{item.restaurant}</p>
+          <p className="text-gray-500 text-xs mb-1">
+            {categories.find(cat => cat.id === item.categoryId)?.name || 'Other'}
+          </p>
           
           <div className="flex items-center space-x-3 text-gray-500 text-xs mb-2">
             <div className="flex items-center space-x-1">
@@ -109,7 +102,7 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
           </div>
           
           <div className="flex items-center justify-between">
-            <span className="text-lg font-bold">${item.price}</span>
+            <span className="text-lg font-bold">₦{item.price}</span>
             <button
               onClick={handleAddToCart}
               className="bg-primary-red text-white w-7 h-7 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
