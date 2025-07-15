@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Yum</string>
+    <string name="title_activity_main">Yum</string>
+    <string name="package_name">com.yum.delivery</string>
+    <string name="custom_url_scheme">com.yum.delivery</string>
+</resources>
