@@ -115,7 +115,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(354, 70%, 54%);
+  background: transparent;
   border-radius: 10px;
 }
 
