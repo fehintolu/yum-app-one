@@ -1,11 +1,12 @@
 import React from 'react';
-import { User, MapPin, Phone, Mail, Settings, CreditCard, HelpCircle, LogOut, Edit } from 'lucide-react';
+import { User, MapPin, Phone, Mail, Settings, CreditCard, HelpCircle, LogOut, Edit, Share } from 'lucide-react';
 import { user } from '@/data/mockData';
 
 const menuItems = [
   { icon: Edit, label: 'Edit Profile', action: 'edit_profile' },
   { icon: MapPin, label: 'Manage Addresses', action: 'addresses' },
-  { icon: CreditCard, label: 'Payment Methods', action: 'payment' },
+  { icon: CreditCard, label: 'Yum Points', action: 'yum_points' },
+  { icon: Share, label: 'Share and Earn', action: 'share_earn' },
   { icon: Settings, label: 'Settings', action: 'settings' },
   { icon: HelpCircle, label: 'Help & Support', action: 'help' },
   { icon: LogOut, label: 'Sign Out', action: 'logout', danger: true },
