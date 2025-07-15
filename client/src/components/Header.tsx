@@ -22,39 +22,39 @@ export default function Header() {
   };
 
   return (
-    <div className="bg-primary-red text-white px-4 py-3 rounded-b-3xl safe-area-top">
+    <div className="fixed top-0 left-1/2 transform -translate-x-1/2 w-full max-w-sm bg-primary-red text-white px-3 py-2 z-30 safe-area-top">
       {/* Location and Notifications */}
-      <div className="flex items-center justify-between mb-4">
-        <div className="flex items-center space-x-2">
-          <MapPin className="w-5 h-5 text-white" />
-          <span className="font-medium text-lg">{state.location}</span>
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center space-x-1">
+          <MapPin className="w-4 h-4 text-white" />
+          <span className="font-medium text-sm">{state.location}</span>
         </div>
         <div className="relative">
-          <Bell className="w-6 h-6 text-white" />
-          <span className="absolute -top-2 -right-2 bg-yellow-accent text-xs rounded-full h-5 w-5 flex items-center justify-center text-gray-800 font-semibold">
+          <Bell className="w-5 h-5 text-white" />
+          <span className="absolute -top-1 -right-1 bg-yellow-accent text-xs rounded-full h-4 w-4 flex items-center justify-center text-gray-800 font-semibold text-xs">
             3
           </span>
         </div>
       </div>
 
       {/* Search Bar */}
-      <div className="relative mb-6">
-        <div className="bg-white rounded-full px-4 py-3 flex items-center space-x-3">
-          <Search className="w-5 h-5 text-gray-400" />
+      <div className="relative">
+        <div className="bg-white rounded-full px-3 py-2 flex items-center space-x-2">
+          <Search className="w-4 h-4 text-gray-400" />
           <input
             type="text"
             placeholder="Search..."
             value={searchValue}
             onChange={handleSearchChange}
-            className="flex-1 outline-none text-gray-700 font-medium"
+            className="flex-1 outline-none text-gray-700 text-sm"
           />
           <button
             onClick={handleCartClick}
             className="relative touch-feedback"
           >
-            <ShoppingCart className="w-6 h-6 text-primary-red" />
+            <ShoppingCart className="w-5 h-5 text-primary-red" />
             {cartItemCount > 0 && (
-              <span className="absolute -top-2 -right-2 bg-primary-red text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-semibold">
+              <span className="absolute -top-1 -right-1 bg-primary-red text-white text-xs rounded-full h-4 w-4 flex items-center justify-center font-semibold text-xs">
                 {cartItemCount}
               </span>
             )}

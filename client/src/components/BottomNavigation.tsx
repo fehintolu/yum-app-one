@@ -26,7 +26,7 @@ export default function BottomNavigation() {
                 isActive ? 'text-primary-red' : 'text-gray-400 hover:text-primary-red'
               }`}
             >
-              <Icon className="w-6 h-6" />
+              <Icon className="w-5 h-5" />
               <span className={`text-xs ${isActive ? 'font-semibold' : 'font-medium'}`}>
                 {label}
               </span>

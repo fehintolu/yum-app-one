@@ -45,19 +45,19 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
             </button>
           </div>
           
-          <div className="flex items-center space-x-1 mb-2">
+          <div className="flex items-center space-x-1 mb-1">
             <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
             <span className="font-semibold text-xs">{item.rating}</span>
           </div>
           
-          <h5 className="font-bold text-sm mb-1 line-clamp-1">{item.name}</h5>
+          <h5 className="font-bold text-xs mb-1 line-clamp-1">{item.name}</h5>
           <p className="text-gray-500 text-xs mb-2 line-clamp-1">{item.restaurant}</p>
           
           <div className="flex items-center justify-between">
-            <span className="text-sm font-bold">${item.price}</span>
+            <span className="text-xs font-bold">${item.price}</span>
             <button
               onClick={handleAddToCart}
-              className="bg-primary-red text-white w-6 h-6 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
+              className="bg-primary-red text-white w-5 h-5 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
             >
               <Plus className="w-3 h-3" />
             </button>
@@ -90,17 +90,17 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
         </div>
         
         <div className="flex-2 ml-4">
-          <div className="flex items-center space-x-2 mb-2">
+          <div className="flex items-center space-x-2 mb-1">
             <div className="flex items-center space-x-1">
-              <Star className="w-4 h-4 text-yellow-400" fill="currentColor" />
-              <span className="font-semibold text-sm">{item.rating}</span>
+              <Star className="w-3 h-3 text-yellow-400" fill="currentColor" />
+              <span className="font-semibold text-xs">{item.rating}</span>
             </div>
           </div>
           
-          <h4 className="font-bold text-lg mb-1">{item.name}</h4>
-          <p className="text-gray-500 text-sm mb-2">{item.restaurant}</p>
+          <h4 className="font-bold text-sm mb-1">{item.name}</h4>
+          <p className="text-gray-500 text-xs mb-1">{item.restaurant}</p>
           
-          <div className="flex items-center space-x-4 text-gray-500 text-sm mb-3">
+          <div className="flex items-center space-x-3 text-gray-500 text-xs mb-2">
             <div className="flex items-center space-x-1">
               <Clock className="w-3 h-3" />
               <span>{item.preparationTime} min</span>
@@ -109,12 +109,12 @@ export default function FoodCard({ item, variant = 'large' }: FoodCardProps) {
           </div>
           
           <div className="flex items-center justify-between">
-            <span className="text-xl font-bold">${item.price}</span>
+            <span className="text-lg font-bold">${item.price}</span>
             <button
               onClick={handleAddToCart}
-              className="bg-primary-red text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
+              className="bg-primary-red text-white w-7 h-7 rounded-full flex items-center justify-center hover:bg-red-600 transition-colors touch-feedback"
             >
-              <Plus className="w-4 h-4" />
+              <Plus className="w-3 h-3" />
             </button>
           </div>
         </div>

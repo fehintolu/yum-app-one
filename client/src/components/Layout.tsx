@@ -18,7 +18,7 @@ export default function Layout({ children }: LayoutProps) {
     <div className="mobile-app max-w-sm mx-auto bg-white min-h-screen shadow-xl relative">
       <Header />
       
-      <main className="pb-24 min-h-screen">
+      <main className="pt-20 pb-24 min-h-screen">
         {children}
       </main>
 
